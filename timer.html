@@ -1,0 +1,100 @@
+<HTML>
+<style>
+
+  body {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    font-family: "Helvetica", sans-serif;
+    padding-top:8%;
+    margin: 0;
+  }
+
+  #average5, #average12, #totalAverage {
+    font-weight: 100;
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 200px;
+    margin:0;
+    margin-bottom: 5%;
+    font-weight: 100;
+  }
+
+  table {
+    text-align: center;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 100%;
+  }
+
+  td, th {
+    padding: 0% 1% 0% 1%;
+     width: 100px;
+  }
+
+  th {
+    padding: 1% 1% 0 1%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button
+  {
+      background-color: #222;
+      border: 2px solid #fff;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      margin-top: 2%;
+      transition-duration: 0.6s;
+      cursor: pointer;
+      border-radius: 7px;
+  }
+
+  button:hover {
+    background-color: white;
+    color: #3c3c3c;
+  }
+
+</style>
+
+<body onkeypress="timerControl()">
+PRESS ANY KEY TO START OR STOP
+  <h1 id="timerDisplay">00:00:00</h1>
+
+  <table>
+    <tr>
+      <th>
+        <h2><b>Average of 5</b></h2>
+      </th>
+      <th>
+        <h2><b>Average of 12</b></h2>
+      </th>
+      <th>
+        <h2><b>Running Average</b></h2>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <h2 id="average5"><span id='numTimes5'>5</span> more</h2>
+      </td>
+      <td>
+        <h2 id="average12"><span id='numTimes12'>12</span> more</h2>
+      </td>
+      <td>
+        <h2 id="totalAverage">1 more</h2>
+      </td>
+    </tr>
+  </table>
+
+  <button onclick="reset()">Reset</button>
+  <script src="timer.js"></script>
+</body>
+
+</HTML>
